@@ -1,0 +1,43 @@
+<div>
+    <hr>
+    <!-- 数据绑定 、 管道符-->
+    {{pageInfo | json}}
+    <hr>
+    <!-- 属性绑定 -->
+    <span [ngClass]="[pageInfo.active ?'blue':'cyan']">Hello word</span>
+    <hr>
+    <!-- 解析html属性 -->
+    <span [innerHTML] = "pageInfo.str"></span>
+    <hr>
+    <!-- 数据循环 -->
+    <ul>
+        <li *ngFor = "let item of pageInfo.list;let key = index">{{item.name}}---{{key}}</li>
+    </ul>
+    <hr>
+    <!-- 条件判断 -->
+    <!-- *ngIf -->
+    <!-- ngSwitch -->
+    <div [ngSwitch] = "pageInfo.condition">
+        <span *ngSwitchCase = "'1'">条件1</span>
+        <span *ngSwitchCase = "'2'">条件2</span>
+        <span *ngSwitchDefault >条件3</span>
+    </div>
+    <hr>
+    <!-- 双向数据绑定 -->
+    <form  >
+        <!-- 下拉框 -->
+        <select [(ngModel)] = "pageInfo.city" name = "city" >
+            <option [value]="item" *ngFor = "let item of pageInfo.cityList">{{item}}</option>
+        </select>
+        <hr>
+        <!-- 单选框 -->
+        <span *ngFor = "let item of pageInfo.radioCityList">
+            {{item}}<input type="radio" name="radioCity" [value]="item" [(ngModel)] = "pageInfo.radioCity" >
+        </span>
+        <hr>
+        <!-- 多选框 -->
+        <span *ngFor = "let item of pageInfo.checkboxCityList;let key = index">
+            {{item.name}}<input type="checkbox" name = "checkCity{{key}}"  [value] = "item.name"  [(ngModel)] = "item.isChecked" >
+        </span>
+    </form>
+</div>
