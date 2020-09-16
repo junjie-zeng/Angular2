@@ -4,11 +4,15 @@ import { FormsModule} from '@angular/forms'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BasicGrammarComponent } from './components/basic-grammar/basic-grammar.component';
+import { DomOperationComponent } from './components/dom-operation/dom-operation.component';
+import { TestComponent } from './components/test/test.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BasicGrammarComponent
+    BasicGrammarComponent,
+    DomOperationComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,
