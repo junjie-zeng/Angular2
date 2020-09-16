@@ -6,13 +6,17 @@ import { AppComponent } from './app.component';
 import { BasicGrammarComponent } from './components/basic-grammar/basic-grammar.component';
 import { DomOperationComponent } from './components/dom-operation/dom-operation.component';
 import { TestComponent } from './components/test/test.component';
+import { CommunicationComponent } from './components/communication/communication.component';
+import { ChildComponent } from './components/communication/child/child.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BasicGrammarComponent,
     DomOperationComponent,
-    TestComponent
+    TestComponent,
+    CommunicationComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,

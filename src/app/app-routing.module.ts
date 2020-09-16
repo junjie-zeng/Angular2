@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { BasicGrammarComponent } from './components/basic-grammar/basic-grammar.component';
 import { DomOperationComponent } from './components/dom-operation/dom-operation.component';
+import { CommunicationComponent } from './components/communication/communication.component';
 const routes: Routes = [
   // 基本语法组件
   {
@@ -9,6 +10,9 @@ const routes: Routes = [
   },
   {
     path:"dom",component:DomOperationComponent
+  },
+  {
+    path:"communication",component:CommunicationComponent
   }
 ];
 

@@ -1,0 +1,5 @@
+<p>组件通信</p>
+<hr>
+<!-- 父组件传值给子组件   [info] = "info"  -->
+<!-- 子触发父组件中的方法 (outer) = "parentMethods($event)" -->
+<app-child [info] = "info" (outer) = "parentMethods($event)"></app-child>
