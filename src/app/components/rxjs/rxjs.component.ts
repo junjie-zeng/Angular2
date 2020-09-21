@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,ViewChild} from '@angular/core';
 import { CommonService } from '../../service/common.service'
 import { map, filter, throttleTime } from 'rxjs/operators'
 import { fromEvent } from 'rxjs'
@@ -8,11 +8,15 @@ import { fromEvent } from 'rxjs'
   styleUrls: ['./rxjs.component.less']
 })
 export class RxjsComponent implements OnInit {
-
+  @ViewChild('domFlowbtn') domFlowbtn:any
   constructor(public common: CommonService) { }
 
   ngOnInit(): void {
 
+    
+  }
+
+  ngAfterViewInit(){
     this.rxjsDomFlow()
   }
 
@@ -80,9 +84,8 @@ export class RxjsComponent implements OnInit {
   // rxjs dom流
   rxjsDomFlow() {
     console.log('rxjs dom流...')
-    var button = document.querySelector('#domFlowbtn')
     // 每隔三秒后才会触发该按钮事件（节流）
-    fromEvent(button,'click').pipe(
+    fromEvent(this.domFlowbtn.nativeElement,'click').pipe(
       throttleTime(3000)
     ).subscribe(()=>{
       console.log('click')
