@@ -4,6 +4,7 @@ import { BasicGrammarComponent } from './components/basic-grammar/basic-grammar.
 import { DomOperationComponent } from './components/dom-operation/dom-operation.component';
 import { CommunicationComponent } from './components/communication/communication.component';
 import { LiveCycleComponent } from './components/live-cycle/live-cycle.component';
+import { RxjsComponent } from './components/rxjs/rxjs.component';
 const routes: Routes = [
   // 基本语法组件
   {
@@ -17,6 +18,10 @@ const routes: Routes = [
   },
   {
     path:"liveCycle",component:LiveCycleComponent
+  }
+  ,
+  {
+    path:"rxjs",component:RxjsComponent
   }
 
   

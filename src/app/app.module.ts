@@ -9,6 +9,7 @@ import { TestComponent } from './components/test/test.component';
 import { CommunicationComponent } from './components/communication/communication.component';
 import { ChildComponent } from './components/communication/child/child.component';
 import { LiveCycleComponent } from './components/live-cycle/live-cycle.component';
+import { RxjsComponent } from './components/rxjs/rxjs.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { LiveCycleComponent } from './components/live-cycle/live-cycle.component
     TestComponent,
     CommunicationComponent,
     ChildComponent,
-    LiveCycleComponent
+    LiveCycleComponent,
+    RxjsComponent
   ],
   imports: [
     BrowserModule,
