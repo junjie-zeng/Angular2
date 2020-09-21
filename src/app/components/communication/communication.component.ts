@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./communication.component.less']
 })
 export class CommunicationComponent implements OnInit {
-  private info = {
+  public info = {
     _from:'我来自父组件'
   }
   constructor() { }
