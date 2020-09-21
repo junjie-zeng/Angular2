@@ -1,0 +1,6 @@
+<p>生命周期</p>
+<button (click) = "handleFlag()">Flag</button>
+<h1 *ngIf = "flag">is Flag</h1>
+<app-test [flag] = "flag"></app-test>
+<hr>
+<input type="text" [(ngModel)] = "name">

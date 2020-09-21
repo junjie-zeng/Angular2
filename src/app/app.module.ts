@@ -8,6 +8,7 @@ import { DomOperationComponent } from './components/dom-operation/dom-operation.
 import { TestComponent } from './components/test/test.component';
 import { CommunicationComponent } from './components/communication/communication.component';
 import { ChildComponent } from './components/communication/child/child.component';
+import { LiveCycleComponent } from './components/live-cycle/live-cycle.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ChildComponent } from './components/communication/child/child.component
     DomOperationComponent,
     TestComponent,
     CommunicationComponent,
-    ChildComponent
+    ChildComponent,
+    LiveCycleComponent
   ],
   imports: [
     BrowserModule,

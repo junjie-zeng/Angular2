@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,Input} from '@angular/core';
 
 @Component({
   selector: 'app-test',
@@ -6,14 +6,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./test.component.less']
 })
 export class TestComponent implements OnInit {
-
+  @Input() flag:boolean
   constructor() { }
+
+
+  // ngOnChanges(): void {
+  //   console.log('ngOnChanges ...')
+  // }
+
 
   ngOnInit(): void {
   }
+  
 
   test(){
     console.log('test ...')
   }
+  
 
 }
