@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http'
 @Component({
   selector: 'app-http',
@@ -12,6 +12,9 @@ export class HttpComponent implements OnInit {
   ngOnInit(): void {
     // get请求
     this.getRequest()
+
+    // post请求
+    this.postRequest()
     // jsonp请求
     this.jsonpRequest()
   }
@@ -23,10 +26,10 @@ export class HttpComponent implements OnInit {
       console.log(res)
     })
   }
-  
+
   // post 请求
   postRequest() {
-    let url = ''
+    let url = 'https://focussend.com/EditorTemp/getFieldList'
     let options = {
       headers: new HttpHeaders({
         'content-type': 'application/json'
