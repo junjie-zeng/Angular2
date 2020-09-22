@@ -5,6 +5,7 @@ import { DomOperationComponent } from './components/dom-operation/dom-operation.
 import { CommunicationComponent } from './components/communication/communication.component';
 import { LiveCycleComponent } from './components/live-cycle/live-cycle.component';
 import { RxjsComponent } from './components/rxjs/rxjs.component';
+import { HttpComponent } from './components/http/http.component';
 const routes: Routes = [
   // 基本语法组件
   {
@@ -22,6 +23,9 @@ const routes: Routes = [
   ,
   {
     path:"rxjs",component:RxjsComponent
+  },
+  {
+    path:'http',component:HttpComponent
   }
 
   
