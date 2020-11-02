@@ -8,8 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class BasicGrammarComponent implements OnInit {
 
   public pageInfo = {
-    city:'上海',
+    city:'北京',
     cityList:['北京','上海','广州'],
+    cityStr:"北京\n天津\n广州\n",
     radioCity:'株洲',
     radioCityList:['西安','长沙','株洲'],
     checkboxCityList:[

@@ -27,8 +27,12 @@
     <!-- 双向数据绑定 -->
     <form  >
         <!-- 下拉框 -->
-        <select [(ngModel)] = "pageInfo.city" name = "city" >
+        <!-- <select [(ngModel)] = "pageInfo.city" name = "city" >
             <option [value]="item" *ngFor = "let item of pageInfo.cityList">{{item}}</option>
+        </select> -->
+        <select [(ngModel)] = "pageInfo.city" name = "city" >
+            <option value="">请选择</option>
+            <option [value]="item" *ngFor = "let item of pageInfo.cityStr.split('\n')">{{item}}</option>
         </select>
         <hr>
         <!-- 单选框 -->
